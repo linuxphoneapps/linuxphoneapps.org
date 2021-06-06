@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <article>
+          <h1 class="text-center">{{ title }}</h1>
+          {% if backend_page and backend_page.content %}<div class="text-center">{{ backend_page.content | safe }}</div>{% endif %}
+			    <div class="card-list">
+            {% for page in term.pages %}
+					    <div class="card">
+						    <div class="card-body">
+							    <h2 class="h3"><a class="stretched-link text-body" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+								    {% if page.extra.lead %}<p>{{ page.extra.lead | safe }}</p>{% elif page.description %}<p>{{ page.description | safe }}</p>{% endif %}
+                
+					    	</div>
+					    </div>
+				    {% endfor %}
+			    </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+

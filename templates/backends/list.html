@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <article>
+          <h1 class="text-center">Backends</h1>
+          <div class="text-center">This page lists various backends used by apps.}</div>
+          <div class="card-list">
+				    {% for term in terms %}
+            <div class="card">
+              <div class="card-body">
+                <h2 class="h3"><a class="stretched-link text-body" href="{{ term.permalink | safe }}">{{ term.name }}</a></h2>
+              </div>
+            </div>
+            {% endfor %}
+			    </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+

@@ -1,19 +1,15 @@
-# SAMPLE for Index fn. Note: The filename is index for HTML reasons, not because of the app name. The folder name is the appid, when there's none, we'll use noappid.appname as a place holder. 
-# Once the project adopts a (new) app id, an alias must be added, so that previous links don't break.
-# 
-# TODO: Check identifiers against appstream.xml /metainfo.xml specifications to make work on a future parser easier!
-+++ 
++++
 title = "Index"
 date = "2019-02-01"
 updated = "2021-05-04"
 [taxonomies]
 mobile-compability = ["5"]
-framework = ["MauiKit", "Kirigami"]
-licenses = ["SPDX"]
-services = 
-backends =
-categories = 
-free-desktop-categories =
+frameworks = ["MauiKit", "Kirigami"]
+licenses = ["GPL-3.0-or-later"]
+services = ["none"]
+backends = ["none"]
+categories = ["file manager"]
+freedesktop-categories = ["Qt","KDE","System","FileTools","FileManager",]
 [extra]
 repository = "https://invent.kde.org/kde/index-fm"
 app_id = "org.kde.index"
