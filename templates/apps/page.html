@@ -21,12 +21,108 @@
         <p class="lead">{{ page.extra.summary }}</p>
         {% if page.extra.description %}
         <h2>Description</h2>
-        {{ page.extra.description }}
+        <p>{{ page.extra.description }}</p>
         {% endif %}
+        {% if page.extra.app_id %}
+        <p>If you're lucky, you can install this app by just hitting this button:</p>
+        <a href="appstream://{{ page.extra.app_id }}" class="btn btn-primary btn-lg">Install</a>
+        {% endif %}
+        <h3>Links:</h3>
+        <ul>
+          <li>
+            <a href="{{ page.extra.repository }}">Repository</a>
+          </li>
+          {% if page.extra.website %}
+          <li>
+            <a href="{{ page.extra.website }}">Website</a>
+          </li>
+          {% endif %}
+        </ul>
         <h2>More info:</h2>
         {% if page.taxonomies.mobile_compatibilities %}
-          <p><strong>Mobile Compatibility:</strong> {% for mobile_compatibility in page.taxonomies.mobile_compatibilities %}<a href="{{ get_taxonomy_url(kind="mobile_compatibilities", name=mobile_compatibility) }}">{{ mobile_compatibility }}</a>{% endfor %}</p>
+          <p>
+            <strong>Mobile Compatibility:</strong> 
+            {% for mobile_compatibility in page.taxonomies.mobile_compatibilities %}
+              <a href="{{ get_taxonomy_url(kind="mobile_compatibilities", name=mobile_compatibility) }}">{{ mobile_compatibility }}</a>
+            {% endfor %}</p>
         {% endif %}
+        {% if page.taxonomies.licenses %}
+        <p>
+          <strong>Licenses:</strong> 
+          <ul>
+          {% for license in page.taxonomies.licenses %}
+            <li>
+              <a href="{{ get_taxonomy_url(kind="licenses", name=license) }}">{{ license }}</a>
+            </li>
+          {% endfor %}</ul></p>
+      {% endif %}
+        {% if page.taxonomies.frameworks %}
+          <p>
+            <strong>Frameworks:</strong> 
+            <ul>
+              {% for framework in page.taxonomies.frameworks %}
+                <li>
+                  <a href="{{ get_taxonomy_url(kind="frameworks", name=framework) }}">{{ framework }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </p>
+        {% endif %}
+        {% if page.taxonomies.backends %}
+          <p>
+            <strong>Backend:</strong> 
+            <ul>
+              {% for backend in page.taxonomies.backends %}
+                <li>
+                  <a href="{{ get_taxonomy_url(kind="backends", name=backend) }}">{{ backend }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </p>
+        {% endif %}
+        {% if page.taxonomies.services %}
+        <p>
+          <strong>Service:</strong> 
+          <ul>
+            {% for service in page.taxonomies.services %}
+              <li>
+                <a href="{{ get_taxonomy_url(kind="services", name=service) }}">{{ service }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </p>
+        {% endif %}
+        {% if page.taxonomies.categories %}
+          <p>
+            <strong>Category:</strong>
+            <ul>
+              {% for category in page.taxonomies.categories %}
+              <li>
+                <a href="{{ get_taxonomy_url(kind="categories", name=category) }}">{{ category }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </p>
+        {% endif %}
+        {% if page.taxonomies.freedesktop_categories %}
+          <p>
+            <strong>FreeDesktop-(Sub-)Categories:</strong> 
+            <ul>
+              {% for freedesktop_category in page.taxonomies.freedesktop_categories %}
+              <li>
+                <a href="{{ get_taxonomy_url(kind="freedesktop_categories", name=freedesktop_category) }}">{{ freedesktop_category }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </p>
+        {% endif %}
+        {% if page.extra.appstream_xml_url %}
+          <p>
+            <strong>AppStream Metadata URL:</strong> 
+              <a href="{{ page.extra.appstream_xml_url }}">{{ page.extra.appstream_xml_url }}</a>
+          </p>
+        {% endif %}
+        
         <h2>Packaging</h2>
         <a href="https://repology.org/project/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}/versions">
           <img src="https://repology.org/badge/vertical-allrepos/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}.svg" alt="Packaging status">

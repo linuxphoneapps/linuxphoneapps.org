@@ -24,7 +24,7 @@ taxonomies = [
   {name = "services"},
   {name = "backends"},
   {name = "categories"},
-  {name = "freedesktop-categories"},
+  {name = "freedesktop_categories"},
 ]
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
@@ -69,7 +69,7 @@ timezone = "Europe/Copenhagen"
 
 # Edit page on reposity or not
 edit_page = true
-docs_repo = "https://github.com/linuxphoneapps/linuxphoneapps-org/"
+docs_repo = "https://github.com/linuxphoneapps/linuxphoneapps.org/"
 repo_branch = "main"
 
 ## Math settings
@@ -93,7 +93,7 @@ type = "Organization"
 logo = "logo-doks.png"
 twitter = "https://twitter.com/linuxphoneapps"
 linked_in = ""
-github = "https://github.com/aaranxu"
+github = "https://github.com/linuxphoneapps"
 section = "blog" # see config.extra.main~url
 ## Sitelinks Search Box
 site_links_search_box = false

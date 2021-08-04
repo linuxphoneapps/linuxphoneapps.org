@@ -11,7 +11,7 @@ licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
 services = ["none"]
 backends = ["none"]
 categories = ["file manager"]
-freedesktop-categories = ["Qt","KDE","System","FileTools","FileManager",]
+freedesktop_categories = ["Qt","KDE","System","FileTools","FileManager",]
 [extra]
 repository = "https://invent.kde.org/maui/index-fm"
 repology = "index-fm"
@@ -22,8 +22,8 @@ description = "Index is a file manager that works on desktops, Android and Plasm
 summary_source_url = "{{ page.extra.repository }}"
 website = ""
 icon_url = "https://invent.kde.org/maui/index-fm/-/raw/master/logo.png" 
-# scale-to-fit = "" # Only fill where necessary
-license_url = "https://invent.kde.org/maui/index-fm/-/blob/master/LICENSES/GPL-3.0-or-later.txt" # because it's sometimes complicated
+scale-to-fit = "" # Only fill where necessary
+license_url = "https://invent.kde.org/maui/index-fm/-/blob/master/LICENSES/GPL-3.0-or-later.txt"
 appstream_xml_url = "https://invent.kde.org/maui/index-fm/-/raw/master/org.kde.index.appdata.xml"
 +++
 
