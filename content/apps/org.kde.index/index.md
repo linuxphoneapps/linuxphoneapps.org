@@ -2,16 +2,19 @@
 title = "Index"
 date = "2019-02-01"
 updated = "2021-05-04"
+weight = 0
+template = "apps/page.html"
 [taxonomies]
-mobile-compability = ["5"]
+mobile_compatibilities = ["5"]
 frameworks = ["MauiKit", "Kirigami"]
-licenses = ["GPL-3.0-or-later"]
+licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
 services = ["none"]
 backends = ["none"]
 categories = ["file manager"]
 freedesktop-categories = ["Qt","KDE","System","FileTools","FileManager",]
 [extra]
-repository = "https://invent.kde.org/kde/index-fm"
+repository = "https://invent.kde.org/maui/index-fm"
+repology = "index-fm"
 app_id = "org.kde.index"
 summary = "Multi-platform file manager"
 summary_url = "{{ page.extra.repository }}"
@@ -21,7 +24,7 @@ website = ""
 icon_url = "https://invent.kde.org/maui/index-fm/-/raw/master/logo.png" 
 # scale-to-fit = "" # Only fill where necessary
 license_url = "https://invent.kde.org/maui/index-fm/-/blob/master/LICENSES/GPL-3.0-or-later.txt" # because it's sometimes complicated
-appstream_xml_url = "https://invent.kde.org/maui/index-fm/-/blob/master/org.kde.index.appdata.xml"
+appstream_xml_url = "https://invent.kde.org/maui/index-fm/-/raw/master/org.kde.index.appdata.xml"
 +++
 
 # Notice
