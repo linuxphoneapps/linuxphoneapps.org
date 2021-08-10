@@ -32,9 +32,19 @@
           <li>
             <a href="{{ page.extra.repository }}">Repository</a>
           </li>
-          {% if page.extra.website %}
+          {% if page.extra.homepage %}
           <li>
-            <a href="{{ page.extra.website }}">Website</a>
+            <a href="{{ page.extra.homepage }}">Homepage</a>
+          </li>
+          {% endif %}
+          {% if page.extra.bugtracker %}
+          <li>
+            <a href="{{ page.extra.bugtracker }}">Bugtracker</a>
+          </li>
+          {% endif %}
+          {% if page.extra.translate %}
+          <li>
+            <a href="{{ page.extra.translate }}">Help with Translations</a>
           </li>
           {% endif %}
         </ul>
@@ -46,16 +56,23 @@
               <a href="{{ get_taxonomy_url(kind="mobile_compatibilities", name=mobile_compatibility) }}">{{ mobile_compatibility }}</a>
             {% endfor %}</p>
         {% endif %}
-        {% if page.taxonomies.licenses %}
+        
         <p>
           <strong>Licenses:</strong> 
+          
           <ul>
-          {% for license in page.taxonomies.licenses %}
-            <li>
-              <a href="{{ get_taxonomy_url(kind="licenses", name=license) }}">{{ license }}</a>
+            {% if page.taxonomies.project_licenses %}{% for project_license in page.taxonomies.project_licenses %}
+            <li>Project license:
+              <a href="{{ get_taxonomy_url(kind="project_licenses", name=project_license) }}">{{ project_license }}</a>
             </li>
-          {% endfor %}</ul></p>
-      {% endif %}
+          {% endfor %}{% endif %}
+          {% if page.taxonomies.metadata_licenses %}{% for metadata_license in page.taxonomies.metadata_licenses %}
+          <li>Metadata license: 
+            <a href="{{ get_taxonomy_url(kind="metadata_licenses", name=metadata_license) }}">{{ metadata_license }}</a>
+          </li>
+        {% endfor %}{% endif %}
+
+        </ul></p>
         {% if page.taxonomies.frameworks %}
           <p>
             <strong>Frameworks:</strong> 
@@ -119,11 +136,31 @@
         {% if page.extra.appstream_xml_url %}
           <p>
             <strong>AppStream Metadata URL:</strong> 
-              <a href="{{ page.extra.appstream_xml_url }}">{{ page.extra.appstream_xml_url }}</a>
+            <ul>
+              <li>
+                <a href="{{ page.extra.appstream_xml_url }}">{{ page.extra.appstream_xml_url }}</a>
+              </li>
+            </ul>
           </p>
         {% endif %}
         
         <h2>Packaging</h2>
+        
+        {% if page.extra.flathub %}
+        <ul>
+          <li>
+            <a href="{{ page.extra.flathub }}">Flathub</a>
+          </li>
+        </ul>
+        {% endif %}
+        {% if page.extra.flatpak_json_url %}
+        <ul>
+          <li>
+            <a href="{{ page.extra.flatpak_json_url }}">flatpak.json</a>
+          </li>
+        </ul>
+        {% endif %}
+        <h3>Repology Status</h3>
         <a href="https://repology.org/project/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}/versions">
           <img src="https://repology.org/badge/vertical-allrepos/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}.svg" alt="Packaging status">
         </a>
