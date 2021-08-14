@@ -1,8 +1,7 @@
 +++
 title = "FAQ"
 description = "Answers to frequently asked questions."
-date = 2021-05-01T19:30:00+00:00
-updated = 2021-05-01T19:30:00+00:00
+date = 2021-08-14T18:30:00+02:00
 draft = false
 weight = 30
 sort_by = "weight"
@@ -14,13 +13,11 @@ toc = true
 top = false
 +++
 
-## What is the AdiDoks?
+## What is LinuxPhoneApps?
 
-AdiDoks is a Zola theme for Documentation's sites, ported by the Hugo Theme
-[Doks](https://getdoks.org), which is a pretty nice theme. Thanks a lot to 
-[*h-enk*](https://github.com/h-enk), the creator of the [Doks](https://getdoks.org).
+LinuxPhoneApps.org is the continuation of [LINMOBapps](https://linmobapps.frama.io) (and thus also [MGLapps](https://mglapps.frama.io)). It lists and documents apps for Linux Phones like the PinePhone or the Librem 5, that don't have a centralized app store (yet).
 
-## Keyboard shortcuts for search?
+## Keyboard shortcuts for search? (Search is currently not enabled yet)
 
 - focus: `/`
 - select: `↓` and `↑`
@@ -29,11 +26,11 @@ AdiDoks is a Zola theme for Documentation's sites, ported by the Hugo Theme
 
 ## Other documentation?
 
-- [Netlify](https://docs.netlify.com/)
+- [Adidoks Theme](https://adidoks.org/docs/)
 - [Zola](https://www.getzola.org/documentation/getting-started/overview/)
 
 ## Contact the creator?
 
-Send *Aaran Xu* an E-mail:
+Send *Peter Mack* an E-mail:
 
-- <aaranxu@outlook.com>
+- <peter@linmob.net>
