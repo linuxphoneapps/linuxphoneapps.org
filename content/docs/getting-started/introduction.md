@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = 'LinuxPhoneApps.org is a place that tries to list every phone app for mainline Linux Phones that don't have centralized app stores.'
+lead = "LinuxPhoneApps.org is a place that tries to list every phone app for mainline Linux Phones that don't have centralized app stores."
 toc = true
 top = false
 +++
