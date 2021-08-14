@@ -31,9 +31,7 @@
         {% for asset in page.assets -%}
           {%- if asset is matching("[.](jpg|png)$") -%}
             {% set image = resize_image(path=asset, width=180, height=330) %}
-            <!--<a href="{{ get_url(path=asset) }}" target="_blank">-->
-              <img src="{{ image.url }}" />
-            <!--</a>-->
+            <img src="{{ image.url }}" />
           {%- endif %}
         {%- endfor %}
         <h3>Links:</h3>
