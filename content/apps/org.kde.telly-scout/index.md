@@ -1,5 +1,5 @@
 +++
-title = "telly scout"
+title = "Telly Scout"
 date = "2021-08-14"
 weight = 0
 template = "apps/page.html"
@@ -33,4 +33,3 @@ scale-to-fit = "" # Only fill where necessary
 license_url = "https://github.com/plata/telly-scout/tree/main/LICENSES"
 appstream_xml_url = "https://github.com/plata/telly-scout/raw/main/org.kde.telly-scout.appdata.xml"
 +++
-{{ screenshotgallery() }}
