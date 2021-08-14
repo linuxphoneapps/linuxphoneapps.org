@@ -9,6 +9,7 @@ url = "https://linmobapps.frama.io"
 url_button = "Go to LINMOBapps"
 repo_license = "Theme and Code: MIT. Content: CC-BY-SA 4.0"
 repo_url = "https://github.com/linuxphoneapps/linuxphoneapps.org"
+repo_version = "alpha"
 
 [[extra.list]]
 title = "For Users"

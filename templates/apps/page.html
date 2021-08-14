@@ -12,17 +12,25 @@
 
 {% block content %}
 <div class="wrap container" role="document">
-  <div class="content">
+  <main class="content">
     <div class="row flex-xl-nowrap">
 	  {{ macros_sidebar::docs_sidebar(current_section=current_section) }}
 	  {{ macros_toc::docs_toc(page=page) }}
       <main class="docs-content col-lg-11 col-xl-9">
         <h1>{{ page.title }}</h1>
+        {% if page.taxonomies.state %}{% for project_state in page.taxonomies.state %}
+            <p class="{{ project_state }}">
+              <a href="{{ get_taxonomy_url(kind="state", name=project_state) }}">{{ project_state }}</a>
+            </p>
+          {% endfor %}{% endif %}
         <p class="lead">{{ page.extra.summary }}</p>
         {% if page.extra.description %}
         <h2>Description</h2>
         <p>{{ page.extra.description }}</p>
         {% endif %}
+
+        {{ page.content | safe }}
+
         {% if page.extra.app_id %}
         <p>If you're lucky, you can install this app by just hitting this button:</p>
         <a href="appstream://{{ page.extra.app_id }}" class="btn btn-primary btn-lg">Install</a>
@@ -170,6 +178,7 @@
           {{ macros_edit_page::docs_edit_page(current_path=current_path) }}
         {% endif %}
         {{ macros_navigation::docs_navigation(page=page, current_section=current_section) }}
+
       </main>
     </div>
   </div>

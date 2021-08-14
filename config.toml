@@ -26,6 +26,7 @@ taxonomies = [
   {name = "backends"},
   {name = "categories"},
   {name = "freedesktop_categories"},
+  {name = "state"},
 ]
 # Whether to build a search index to be used later on by a JavaScript library
 #build_search_index = true
@@ -61,7 +62,7 @@ theme_color = "#fff"
 
 # More about site's title
 title_separator = "|"  # set as |, -, _, etc
-title_addition = "Modern Documentation Theme"
+title_addition = "Apps for Linux Phone OSes that do not have a centralized app store"
 
 
 # Set date format in blog publish metadata
@@ -108,9 +109,9 @@ url = "/apps/"
 weight = 10
 
 [[extra.menu.main]]
-name = "Blog  "
-section = "blog"
-url = "https://linmob.net/tags/linmobapps/"
+name = "Docs  "
+section = "docs"
+url = "/docs/"
 weight = 20
 
 [[extra.menu.social]]
