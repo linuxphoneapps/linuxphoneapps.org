@@ -33,9 +33,9 @@
         {% if page.extra.description %}
         <h2>Description</h2>
         <p>{{ page.extra.description }}</p>
-        {% if page.extra.description_source %}
+        {% if page.extra.description_url %}
         <small>
-          <a href="{{ page.extra.description_source }}">Source</a>
+          <a href="{{ page.extra.description_url }}">Source</a>
         </small>
         {% endif %}
         {% endif %}
@@ -61,6 +61,11 @@
           {% if page.extra.translate %}
           <li>
             <a href="{{ page.extra.translate }}">Help with Translations</a>
+          </li>
+          {% endif %}
+          {% if page.extra.donation %}
+          <li>
+            <a href="{{ page.extra.donation }}">Donate</a>
           </li>
           {% endif %}
         </ul>
