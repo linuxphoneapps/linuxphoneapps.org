@@ -24,16 +24,25 @@
             </p>
           {% endfor %}{% endif %}
         <p class="lead">{{ page.extra.summary }}</p>
-        {% if page.extra.description %}
-        <h2>Description</h2>
-        <p>{{ page.extra.description }}</p>
-        {% endif %}
         {% for asset in page.assets -%}
           {%- if asset is matching("[.](jpg|png)$") -%}
-            {% set image = resize_image(path=asset, width=180, height=330) %}
+            {% set image = resize_image(path=asset, width=180, height=335) %}
             <img src="{{ image.url }}" />
           {%- endif %}
         {%- endfor %}
+        {% if page.extra.description %}
+        <h2>Description</h2>
+        <p>{{ page.extra.description }}</p>
+        {% if page.extra.description_source %}
+        <small>
+          <a href="{{ page.extra.description_source }}">Source</a>
+        </small>
+        {% endif %}
+        {% endif %}
+        {% if page.extra.notice %}
+        <h3>Editorial notice:</h3>
+        {{ page.extra.notice }}
+        {% endif %}
         <h3>Links:</h3>
         <ul>
           <li>
