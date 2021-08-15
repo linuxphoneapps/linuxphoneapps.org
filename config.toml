@@ -71,7 +71,7 @@ timezone = "Europe/Copenhagen"
 
 # Edit page on reposity or not
 edit_page = true
-docs_repo = "https://github.com/linuxphoneapps/linuxphoneapps.org/"
+docs_repo = "https://github.com/linuxphoneapps/linuxphoneapps.org"
 repo_branch = "main"
 
 ## Math settings
