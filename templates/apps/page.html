@@ -77,7 +77,6 @@
               <a href="{{ get_taxonomy_url(kind="mobile_compatibilities", name=mobile_compatibility) }}">{{ mobile_compatibility }}</a>
             {% endfor %}</p>
         {% endif %}
-        
         <p>
           <strong>Licenses:</strong> 
           
@@ -120,7 +119,7 @@
         {% endif %}
         {% if page.taxonomies.services %}
         <p>
-          <strong>Service:</strong> 
+          <strong>Used Services:</strong> 
           <ul>
             {% for service in page.taxonomies.services %}
               <li>
@@ -154,6 +153,30 @@
             </ul>
           </p>
         {% endif %}
+        {% if page.taxonomies.build_systems %}
+          <p>
+            <strong>Build system:</strong> 
+            <ul>
+              {% for build_system in page.taxonomies.build_systems %}
+              <li>
+                <a href="{{ get_taxonomy_url(kind="build_systems", name=build_system) }}">{{ build_system }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </p>
+        {% endif %}
+        {% if page.taxonomies.programming_languages %}
+        <p>
+          <strong>Programming languages:</strong> 
+          <ul>
+            {% for programming_language in page.taxonomies.programming_languages %}
+            <li>
+              <a href="{{ get_taxonomy_url(kind="programming_languages", name=programming_language) }}">{{ programming_language }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </p>
+      {% endif %}
         {% if page.extra.appstream_xml_url %}
           <p>
             <strong>AppStream Metadata URL:</strong> 

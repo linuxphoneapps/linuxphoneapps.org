@@ -26,6 +26,8 @@ taxonomies = [
   {name = "backends"},
   {name = "categories"},
   {name = "freedesktop_categories"},
+  {name = "build_systems"},
+  {name = "programming_languages"},
   {name = "state"},
 ]
 # Whether to build a search index to be used later on by a JavaScript library

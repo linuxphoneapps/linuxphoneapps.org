@@ -12,6 +12,8 @@ services = ["xmltv.se"]
 # backends =  
 categories = ["tv guide"]
 freedesktop_categories = ["Qt","KDE","Utility",]
+build_systems = ["cmake"]
+programming_languages = ["C++","QML",]
 state = ["WIP"]
 [extra]
 repository = "https://github.com/plata/telly-scout"

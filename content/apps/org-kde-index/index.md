@@ -13,7 +13,9 @@ project_licenses = ["LGPL-3.0-or-later"] # SPDX 3-0 identifier
 # backends = 
 categories = ["file manager"]
 freedesktop_categories = ["Qt","KDE","System","FileTools","FileManager",]
-state = [""]
+build_systems = ["cmake"]
+programming_languages = ["C++","QML",]
+state = ["mature"]
 [extra]
 repository = "https://invent.kde.org/maui/index-fm"
 homepage = "https://mauikit.org/"

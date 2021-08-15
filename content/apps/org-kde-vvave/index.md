@@ -13,7 +13,9 @@ project_licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
 # backends = 
 categories = ["music"]
 freedesktop_categories = ["Qt","Audio","Player",]
-state = [""]
+build_systems = ["cmake"]
+programming_languages = ["C++","QML",]
+state = ["mature"]
 [extra]
 repository = "https://invent.kde.org/maui/vvave"
 homepage = "https://vvave.kde.org/"
