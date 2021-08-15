@@ -1,5 +1,5 @@
 +++
-title = "LinuxPhoneApps.org"
+title = "LinuxPhoneApps"
 
 
 # The homepage contents
@@ -13,7 +13,7 @@ repo_version = "alpha"
 
 [[extra.list]]
 title = "For Users"
-content = "Find out whether there's an app for what you would like or need to do yet, and how to get it!"
+content = "Find out whether there's an app for what you would like or need to do, and how to get it!"
 
 [[extra.list]]
 title = "For Distributions and Package maintainers"
@@ -21,7 +21,7 @@ content = "Find software to package or even pre-install on your distribution."
 
 [[extra.list]]
 title = "For developers"
-content = "Help developers to find efforts for similar apps, to join projects    and provide links to documentation."
+content = "Help developers to find efforts for similar apps, to join a project, start something similar or find links to further documentation."
 
 [[extra.list]]
 title = "Get involved"
