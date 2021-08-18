@@ -1,5 +1,5 @@
 +++
-title = "Licenses"
+title = "Üroject Licenses"
 description = "Further information on used Software Licenses"
 date = 2021-04-01T08:00:00+00:00
 updated = 2021-04-01T08:00:00+00:00

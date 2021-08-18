@@ -12,7 +12,7 @@ draft = false
 #
 # Note: We use quoted keys here.
 [extra.framework_pages]
-"Kirigami" = "frameworks/kirigami.md"
+"Kirigami" = "frameworks/Kirigami.md"
 +++
 
-An overview of the UI Frameworks apps use.
+An overview of the licenses used.

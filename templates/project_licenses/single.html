@@ -7,7 +7,7 @@
       <div class="col-md-12 col-lg-10 col-xl-8">
         <article>
           <h1 class="text-center">{{ title }}</h1>
-          {% if backend_page and backend_page.content %}<div class="text-center">{{ backend_page.content | safe }}</div>{% endif %}
+          {% if project_license_page and project_license_page.content %}<div class="text-center">{{ project_license_page.content | safe }}</div>{% endif %}
 			    <div class="card-list">
             {% for page in term.pages %}
 					    <div class="card">
