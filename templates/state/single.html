@@ -2,7 +2,7 @@
 
 {% block seo %}
   {% set license_name_in_url = term.permalink | trim_end_matches(pat="/") | split(pat="/") | last %}
-  {% set section = get_section(path="licenses/_index.md") %}
+  {% set section = get_section(path="project_licenses/_index.md") %}
   
   {% if section.extra.license_pages[license_name_in_url] %}
     {% set_global license_page = get_page(path=section.extra.license_pages[license_name_in_url])%}
