@@ -1,5 +1,5 @@
 +++
-title = "VVave"
+title = "Vvave"
 date = "2019-02-01"
 updated = "2021-08-04"
 weight = 0
@@ -8,7 +8,7 @@ template = "apps/page.html"
 mobile_compatibilities = ["5"]
 frameworks = ["MauiKit", "Kirigami"]
 metadata_licenses = ["CC0-1.0"]
-project_licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
+project_licenses = ["LGPL-3.0-or-later"] # SPDX 3-0 identifier
 # services = 
 # backends = 
 categories = ["music"]
