@@ -15,7 +15,7 @@ generate_feed = true
 
 # When set to "true", the generated HTML files are minified.
 minify_html = false
-
+slugify.paths = "safe"
 # The taxonomies to be rendered for the site and their configuration.
 taxonomies = [
   {name = "mobile_compatibilities"},
