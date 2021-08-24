@@ -1,0 +1,38 @@
++++
+title = "Gtkeddit"
+date = "2021-08-24"
+updated = "2021-08-24"
+weight = 0
+template = "apps/page.html"
+[taxonomies]
+mobile_compatibilities = ["5"]
+frameworks = ["GTK4"]
+metadata_licenses = ["CC0-1.0"]
+project_licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
+# services = 
+# backends = 
+categories = ["social network"]
+freedesktop_categories = ["GTK","Network","News","Feed",]
+build_systems = ["cmake"]
+programming_languages = ["C++"]
+state = ["early"]
+[extra]
+repository = "https://gitlab.com/caveman250/Gtkeddit"
+homepage = ""
+bugtracker = "https://gitlab.com/caveman250/Gtkeddit/-/issues"
+donation = ""
+translate = ""
+repology = "gtkeddit"
+flathub = "https://flathub.org/apps/details/io.gitlab.caveman250.gtkeddit"
+flatpak_json_url = "https://gitlab.com/caveman250/Gtkeddit/-/raw/master/flatpak/io.gitlab.caveman250.gtkeddit.json"
+app_id = "io.gitlab.caveman250.gtkeddit"
+summary = "A GTK4 Reddit client written in C++"
+summary_url = "https://gitlab.com/caveman250/Gtkeddit"
+description = ""
+description_url = "https://invent.kde.org/maui/vvave"
+icon_url = "https://invent.kde.org/maui/vvave/-/raw/master/logo.png" 
+notice = ""
+scale-to-fit = "" # Only fill where necessary
+license_url = "https://gitlab.com/caveman250/Gtkeddit/-/raw/master/LICENSE"
+appstream_xml_url = "https://gitlab.com/caveman250/Gtkeddit/-/raw/master/io.gitlab.caveman250.gtkeddit.metainfo.xml"
++++
