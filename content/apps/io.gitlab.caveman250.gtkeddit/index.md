@@ -1,12 +1,12 @@
 +++
 title = "Gtkeddit"
 date = "2021-08-24"
-updated = "2021-08-24"
+updated = "2021-09-01"
 weight = 0
 template = "apps/page.html"
 [taxonomies]
 mobile_compatibilities = ["5"]
-frameworks = ["GTK4"]
+frameworks = ["GTK4", "libadwaita",]
 metadata_licenses = ["FSFAP"]
 project_licenses = ["GPL-3.0-or-later"] # SPDX 3-0 identifier
 # services = 
