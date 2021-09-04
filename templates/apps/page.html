@@ -179,7 +179,7 @@
       {% endif %}
         {% if page.extra.appstream_xml_url %}
           <p>
-            <strong>AppStream Metadata URL:</strong> 
+            <strong>AppStream Metadata URL:</strong> search
             <ul>
               <li>
                 <a href="{{ page.extra.appstream_xml_url }}">{{ page.extra.appstream_xml_url }}</a>
@@ -205,20 +205,20 @@
         </ul>
         {% endif %}
         <h3>Repology Status</h3>
+        <p>
         <a href="https://repology.org/project/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}/versions">
           <img src="https://repology.org/badge/vertical-allrepos/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}.svg" alt="Packaging status">
         </a>
+        </p>
         {% if page.extra.app_id %}
         <p>If you're lucky, you can install this app by just hitting this button:</p>
         <a href="appstream://{{ page.extra.app_id }}" class="btn btn-primary btn-lg">Install</a>
         {% endif %}
-        {% if page.extra.lead %}<p class="lead ">{{ page.extra.lead | safe }}</p>{% endif %}
         {{ page.content | safe }}
         {% if config.extra.edit_page %}
           {{ macros_edit_page::docs_edit_page(current_path=current_path) }}
         {% endif %}
-        {{ macros_navigation::docs_navigation(page=page, current_section=current_section) }}
-
+        <p><small>This listing was added on {{ page.date }}{% if page.updated %} and last edited on {{ page.updated }}{% endif %}.</small></p>
       </main>
     </div>
   </div>
