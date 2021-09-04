@@ -31,13 +31,13 @@ taxonomies = [
   {name = "state"},
 ]
 # Whether to build a search index to be used later on by a JavaScript library
-#build_search_index = true
+build_search_index = true
 
 [search]
 # Whether to include the title of the page/section in the index
 include_title = true
 # Whether to include the description of the page/section in the index
-include_description = false
+include_description = true
 # Whether to include the rendered content of the page/section in the index
 include_content = true
 
