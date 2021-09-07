@@ -1,14 +1,14 @@
 {% extends "page.html" %}
 
 {% block seo %}
-  {% set build_system_name_in_url = term.permalink | trim_end_matches(pat="/") | split(pat="/") | last %}
+  {% set buildsystems_name_in_url = term.permalink | trim_end_matches(pat="/") | split(pat="/") | last %}
   {% set section = get_section(path="build-systems/_index.md") %}
   
-  {% if section.extra.build_system_pages[build_system_name_in_url] %}
-    {% set_global build_system_page = get_page(path=section.extra.build_system_pages[build_system_name_in_url])%}
+  {% if section.extra.buildsystems_pages[buildsystems_name_in_url] %}
+    {% set_global buildsystems_page = get_page(path=section.extra.buildsystems_pages[buildsystems_name_in_url])%}
   {% endif %}
-  {% if build_system_page and build_system_page.title %}
-    {% set_global title = build_system_page.title %}
+  {% if buildsystems_page and buildsystems_page.title %}
+    {% set_global title = buildsystems_page.title %}
   {% else %}
     {% set_global title = term.name %}
   {% endif %}
@@ -26,8 +26,8 @@
     {% set title_addition = "" %}
   {% endif %}
   
-  {% if build_system_page and build_system_page.description %}
-    {% set description = build_system_page.description %}
+  {% if buildsystems_page and buildsystems_page.description %}
+    {% set description = buildsystems_page.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
@@ -43,7 +43,7 @@
       <div class="col-md-12 col-lg-10 col-xl-8">
         <article>
           <h1 class="text-center">{{ title }}</h1>
-          {% if build_system_page and build_system_page.content %}<div class="text-center">{{ build_system_page.content | safe }}</div>{% endif %}
+          {% if buildsystems_page and buildsystems_page.content %}<div class="text-center">{{ buildsystems_page.content | safe }}</div>{% endif %}
 			    <div class="card-list">
             {% for page in term.pages %}
 					    <div class="card">

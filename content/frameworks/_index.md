@@ -12,7 +12,13 @@ draft = false
 #
 # Note: We use quoted keys here.
 [extra.framework_pages]
-"Kirigami" = "frameworks/kirigami.md"
+"gtk3" = "frameworks/gtk3.md"
+"gtk4" = "frameworks/gtk4.md"
+"kirigami" = "frameworks/kirigami.md"
+"libadwaita" = "frameworks/libadwaita.md"
+"libhandy" = "frameworks/libhandy.md"
+"mauikit" = "frameworks/mauikit.md"
+"qtquick" = "frameworks/qtquick.md"
 +++
 
 An overview of the UI Frameworks apps use.

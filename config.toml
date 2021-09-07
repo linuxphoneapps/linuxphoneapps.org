@@ -98,9 +98,9 @@ logo = "logo-doks.png"
 twitter = "https://twitter.com/linuxphoneapps"
 linked_in = ""
 github = "https://github.com/linuxphoneapps"
-section = "blog" # see config.extra.main~url
+section = "apps" # see config.extra.main~url
 ## Sitelinks Search Box
-site_links_search_box = false
+site_links_search_box = true
 
 
 # Menu items

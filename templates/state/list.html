@@ -8,7 +8,7 @@
     {% set title_separator = " | " %}
   {% endif %}
 
-  {% set_global section = get_section(path="project_licenses/_index.md") %}
+  {% set_global section = get_section(path="state/_index.md") %}
   {% if section.title and config.title %}
     {% set title = section.title %}
     {% set title_addition = title_separator ~ config.title %}
