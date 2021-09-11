@@ -16,7 +16,11 @@ top = false
 
 ## Requirements
 
-Currently, the easiest way to add an app that causes the smallest amount of overhead, is via GitHub. So you would need a GitHub account - it's not a hard requirement, as you can also submit an app via email.
+** Please don't add apps here yet, until [this milestone is completed](https://github.com/linuxphoneapps/linuxphoneapps.org/milestone/1). Check the [README](https://github.com/linuxphoneapps/linuxphoneapps.org/blob/main/README.md) for more info!**
+
+The easiest way to add an app that causes the smallest amount of overhead, is likely going to be via GitHub. So you would need a GitHub account - it's not a hard requirement, as you can also [submit an app via email](https://lists.sr.ht/~linuxphoneapps/linuxphoneapps.org-discuss).
 
 ## TBD
+
+This page is not done. 
 
