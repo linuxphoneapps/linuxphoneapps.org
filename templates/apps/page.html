@@ -23,27 +23,27 @@
               <a href="{{ get_taxonomy_url(kind="state", name=project_state) }}">{{ project_state }}</a>
             </p>
           {% endfor %}{% endif %}
-        <p class="lead">{{ page.extra.summary }}</p>
+        <p class="lead">{{ page.description }}</p>
         {% for asset in page.assets -%}
           {%- if asset is matching("[.](jpg|png)$") -%}
             {% set image = resize_image(path=asset, width=180, height=335) %}
             <img src="{{ image.url }}" />
           {%- endif %}
         {%- endfor %}
-        {% if page.extra.description %}
+        {% if page.content %}
         <h2>Description</h2>
-        <p>{{ page.extra.description }}</p>
-        {% if page.extra.description_url %}
+        {{ page.content | safe }}
+        {% if page.extra.description_source_url %}
         <small>
-          <a href="{{ page.extra.description_url }}">Source</a>
+          <a href="{{ page.extra.description_source_url }}">Source</a>
         </small>
         {% endif %}
         {% endif %}
         {% if page.extra.notice %}
         <h3>Editorial notice:</h3>
-        {{ page.extra.notice }}
+        {{ page.extra.notice | markdown | safe }}
         {% endif %}
-        <h3>Links:</h3>
+        <h3>Project links:</h3>
         <ul>
           <li>
             <a href="{{ page.extra.repository }}">Repository</a>
@@ -69,6 +69,18 @@
           </li>
           {% endif %}
         </ul>
+         {% if page.extra.moreinformation %}
+         <h3>Links with more information about the ap:</h3>
+            <ul>
+            {% for item in page.extra.moreinformation %}
+                <li>
+                    <a href="{{ item.url | safe }}">
+                        {{ item.name | safe }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
         <h2>More info:</h2>
         {% if page.taxonomies.mobile_compatibilities %}
           <p>
@@ -206,15 +218,22 @@
         {% endif %}
         <h3>Repology Status</h3>
         <p>
-        <a href="https://repology.org/project/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}/versions">
-          <img src="https://repology.org/badge/vertical-allrepos/{% if page.extra.repology %}{{ page.extra.repology }}{% else %}{{ page.title | lower }}{% endif %}.svg" alt="Packaging status">
+        {% if page.extra.repology %}
+        {% for repologyname in page.extra.repology %}
+        <a href="https://repology.org/project/{{ repologyname }}/versions">
+          <img src="https://repology.org/badge/vertical-allrepos/{{ repologyname }}.svg" alt="Packaging status">
         </a>
+        {% endfor %}
+        {% else %}
+        <a href="https://repology.org/project/{{ page.title | lower }}/versions">
+            <img src="https://repology.org/badge/vertical-allrepos/{{ page.title | lower }}.svg" alt="Packaging status">
+        </a>
+        {% endif %}
         </p>
         {% if page.extra.app_id %}
         <p>If you're lucky, you can install this app by just hitting this button:</p>
         <a href="appstream://{{ page.extra.app_id }}" class="btn btn-primary btn-lg">Install</a>
         {% endif %}
-        {{ page.content | safe }}
         {% if config.extra.edit_page %}
           {{ macros_edit_page::docs_edit_page(current_path=current_path) }}
         {% endif %}
