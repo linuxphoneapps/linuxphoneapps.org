@@ -1,15 +1,18 @@
+ 
 +++
-title = "Index"
-description = "Multi-platform file manager"
-date = "2019-02-01"
-updated = "2021-08-24"
-author = "cahfofpai" # Original reporter
+# Remove this line before commiting
+draft = true
+title = "" # Name of the app
+description = "" # Summary describing the app
+date = "2019-02-01" # Date when the app was added
+# updated = "" # Empty at first, filled on updates
+author = "" # Original reporter
 template = "apps/page.html"
 [taxonomies]
 mobile_compatibilities = ["5"]
-frameworks = ["MauiKit", "Kirigami"]
-metadata_licenses = ["CC0-1.0"]
-project_licenses = ["LGPL-3.0-or-later"] # SPDX 3-0 identifier
+frameworks = [""]
+metadata_licenses = [""] # License of project metadata
+project_licenses = [""] # SPDX 3-0 identifier
 # services = 
 # backends = 
 categories = ["file manager"]
@@ -33,12 +36,9 @@ summary_source_url = "https://invent.kde.org/maui/index-fm"
 description_source_url = "https://invent.kde.org/maui/index-fm" # Don't fill if editorial
 icon_url = "https://invent.kde.org/maui/index-fm/-/raw/master/logo.png" # not used yet, fill anyway please
 notice = "" # can be markdown or html, use <br> for line breaks
-moreinformation =[ 
-   {url = "https://medium.com/@temisclopeolimac/index-overview-b2ddcb16534f", name = "Camilo Higuita: Index — overview (Nov 2018)"},
-]
 scale-to-fit = "" # Only fill where necessary
 license_url = "https://invent.kde.org/maui/index-fm/-/blob/master/LICENSES/GPL-3.0-or-later.txt"
 appstream_xml_url = "https://invent.kde.org/maui/index-fm/-/raw/master/org.kde.index.appdata.xml"
 listing_contributors = ["1peter10"] # Further contributors (array)
 +++
-Index is a file manager that works on desktops, Android and Plasma Mobile. Index lets you browse your system files and applications and preview your music, text, image and video files and share them with external applications.
+This is where the description goes. Feel free to use markdown formatting.
