@@ -1,6 +1,11 @@
+
 # linuxphoneapps.org
 
-Working draft for a [Zola](https://getzola.org)-based (likely with the [adidoks](https://www.getzola.org/themes/adidoks/) theme) replacement for [LINMOBapps.frama.io](https://linmobapps.frama.io) - the goal is an app directory for Linux Phones like the PinePhone and Librem 5, which 
+## Join the [discussion on how to build LinuxPhoneApps](https://framagit.org/linmobapps/linmobapps.frama.io/-/issues/10)
+
+## What is this?
+
+Abandoned working draft for a [Zola](https://getzola.org)-based (likely with the [adidoks](https://www.getzola.org/themes/adidoks/) theme) replacement for [LINMOBapps.frama.io](https://linmobapps.frama.io) - the goal is an app directory for Linux Phones like the PinePhone and Librem 5, which 
 * performs well on these phones (linmobapps does not),
 * allows for easier contributions for developers and users,
 * provides more information and requires less maintenance.
