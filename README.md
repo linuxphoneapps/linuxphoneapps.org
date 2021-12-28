@@ -1,6 +1,8 @@
 
 # linuxphoneapps.org
 
+MOVED TO [FRAMAGIT](https://framagit.org/linuxphoneapps/linuxphoneapps.frama.io)!
+
 ## Join the [discussion on how to build LinuxPhoneApps](https://framagit.org/linmobapps/linmobapps.frama.io/-/issues/10)
 
 ## What is this?
